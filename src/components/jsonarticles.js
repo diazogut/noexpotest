@@ -44,9 +44,10 @@ export const JsonArticles = () =>
     //в асинхронном режиме подключаемся к API, забираем json, отдаем в функцию выбора рандома, возвращаем поле body
     const fetchAndLog = async () => 
     {
+        setData('Загрузка ...');
         try 
         {
-            const response = await fetch('http://192.168.0.139:8000/articles.json');            
+            const response = await fetch('https://rorback.herokuapp.com/articles');            
             const json = await response.json();
             const random = (arrayRandElement(json));
             const body = random.body
