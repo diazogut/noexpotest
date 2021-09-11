@@ -147,6 +147,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+        storeFile file('noexpo.keystore')
+        storePassword '1234567890'
+        keyAlias 'noexpo'
+        keyPassword '1234567890'
+    }
     }
     buildTypes {
         debug {
