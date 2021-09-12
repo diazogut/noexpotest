@@ -5,7 +5,7 @@ import {API_URL, API_ARTICLES_ALL} from './ApiConfig';
 import { Random_EL_ALL } from './JsonMethod';
 
 //Обращается к базе и возвращает рандомный текст из таблицы
-export const JsonArticles = () => 
+export const JsonWork = () => 
 {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const fadeIn = () => 
@@ -36,14 +36,7 @@ export const JsonArticles = () =>
 
     const [data, setData] = useState([]);
 
-    //принимает значение массива и выбирает из него рандомный элемент
-    function arrayRandElement(arr) 
-    {
-        var rand = Math.floor(Math.random() * arr.length);
-        return arr[rand];
-    }
-
-    //в асинхронном режиме подключаемся к API, забираем json, отдаем в функцию выбора рандома, возвращаем поле body
+    //функция в асинхронном режиме подключается к API, забирает json, отдает в функцию выбора рандома, возвращает поле body
     const fetchAndLog = async () => 
     {
         setData('Загрузка ...');

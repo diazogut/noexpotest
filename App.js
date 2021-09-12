@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { JsonArticles } from './src/components/JsonRandom'; 
+import { JsonWork } from './src/components/JsonWork'; 
 import { styles } from './src/components/styles';
 import { TimeNow } from './src/components/TimeNow';
 
@@ -19,7 +19,7 @@ export default function App()
       </View>  
       
       {/* возврат факта из бд*/}
-      <JsonArticles/>
+      <JsonWork/>
     </View>
   );
 }

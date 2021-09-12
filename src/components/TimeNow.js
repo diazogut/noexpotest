@@ -8,19 +8,19 @@ export function TimeNow()
   var date = new Date();
   var current_hour = date.getHours();
 
-  let night = ['0','1','2','3','4','5']
-  let morning = ['6','7','8','9','10']
-  let day = ['11','12','13','14','15','16','17']
-  let evening = ['18','19','20','21','22','23']
+  var night = ['0','1','2','3','4','5']
+  var morning = ['6','7','8','9','10']
+  var day = ['11','12','13','14','15','16','17']
+  var evening = ['18','19','20','21','22','23']
 
-  let timesofday =  [night,morning,day,evening]
-  let justnow = false
-  let i = 0
+  var timesofday =  [night,morning,day,evening]
+  var justnow = false
+  var i = 0
 
   //выполняй цикл, пока не найдет значение времени в массивах, описанных временами суток
   while (justnow === false) 
   {
-    let justnow = timesofday[i].includes(current_hour.toString())
+    var justnow = timesofday[i].includes(current_hour.toString())
     
     if (justnow === true) 
     {
