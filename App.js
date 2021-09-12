@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { JsonArticles } from './src/components/jsonarticles'; 
-import { styles } from './src/components/styles';
+import { JsonArticles } from './src/components/JsonRandom'; 
+import { styles } from './src/components/Styles';
 import { TimeNow } from './src/components/TimeNow';
 
 

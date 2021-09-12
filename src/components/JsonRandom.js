@@ -1,10 +1,12 @@
 import React, {useEffect, useState,useRef } from 'react';
-import { View, Text, Animated, Button, StyleSheet,TouchableWithoutFeedback,Image } from 'react-native';
+import { View, Text, Animated, TouchableWithoutFeedback } from 'react-native';
 import { styles } from './styles';
+import {API_URL, API_ARTICLES_ALL} from './ApiConfig';
+import { Random_EL_ALL } from './JsonMethod';
 
 //Обращается к базе и возвращает рандомный текст из таблицы
 export const JsonArticles = () => 
-{      
+{
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const fadeIn = () => 
     {
@@ -47,10 +49,9 @@ export const JsonArticles = () =>
         setData('Загрузка ...');
         try 
         {
-            const response = await fetch('https://rorback.herokuapp.com/articles');            
+            const response = await fetch(API_URL+API_ARTICLES_ALL);            
             const json = await response.json();
-            const random = (arrayRandElement(json));
-            const body = random.body
+            const body = (Random_EL_ALL(json));
             setData(body);
             return body;
         }
